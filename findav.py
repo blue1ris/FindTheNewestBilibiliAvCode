@@ -76,29 +76,3 @@ while 1:
         print('maxcode:av{}\nstartTime:{}\nfinishTime:{}\nusedTime:{}'.format(maxCode,startTime.strftime('%Y-%m-%d %H:%M:%S'),finishTime.strftime('%Y-%m-%d %H:%M:%S'),str(finishTime-startTime)))
         print('----------------------------------------------------------END----------------------------------------------------------')
         os._exit(0)
-
-# for f in l:  #从列表里遍历内容给f：
-#     f.join()  #循环设置列表的内容结束
-
-
-#      1 #同步锁
-#  2 import time   #导入时间模块
-#  3 import threading  #导入threading模块
-#  4 num=100    #设置一个全局变量
-#  6 def sudnum():   #定一个函数sudnum'
-#  7     global num    #声明全局变量
-#  8     lock.acquire()
-#  9     temp=num     #读取全局变量num
-# 10     time.sleep(0)   #增加一个休眠功能
-# 11     num=temp-1     #把从全局拿来的变量进行减一的操作
-# 12     lock.release()
-# 13 l=[]    #在全局创建一个空了表
-# 14 for i in range(100):   #从0到100进行循环
-# 15     t=threading.Thread(target=sudnum)   #在循环中创建子线程，共创建100个
-# 16     t.start()   #循环启动子线程
-# 17     l.append(t)   #把循环创建的实例化添加到列表中
-# 18 
-# 19 for f in l:  #从列表里遍历内容给f：
-# 20     f.join()  #循环设置列表的内容结束
-# 21 
-# 22 print('Result:',num)   #打印通过多次子线程更改过的变量内容
